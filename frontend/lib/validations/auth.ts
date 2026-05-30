@@ -10,7 +10,7 @@ const passwordField = z
   .min(1, "Password is required")
   .min(8, "Password must be at least 8 characters");
 
-export const signInSchema = z.object({
+export const loginSchema = z.object({
   email: emailField,
   password: passwordField,
 });
@@ -30,10 +30,10 @@ export const signUpSchema = z
     path: ["confirmPassword"],
   });
 
-export type SignInFormValues = z.infer<typeof signInSchema>;
+export type LoginFormValues = z.infer<typeof loginSchema>;
 export type SignUpFormValues = z.infer<typeof signUpSchema>;
 
-export const signInDefaultValues: SignInFormValues = {
+export const loginDefaultValues: LoginFormValues = {
   email: "",
   password: "",
 };

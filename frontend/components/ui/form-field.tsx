@@ -13,7 +13,7 @@ function Field({ label, error, className, id, name, ...props }: FieldProps) {
   const fieldId = id ?? name;
 
   return (
-    <div className="space-y-1.5">
+    <div className="space-y-1.5 text-left">
       <Label htmlFor={fieldId}>{label}</Label>
       <Input
         id={fieldId}

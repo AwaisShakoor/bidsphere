@@ -7,30 +7,30 @@ import { BidSphereCard } from "@/components/auth/auth-card";
 import { Button } from "@/components/ui/button";
 import { Field } from "@/components/ui/form-field";
 import {
-  signInDefaultValues,
-  signInSchema,
-  type SignInFormValues,
+  loginDefaultValues,
+  loginSchema,
+  type LoginFormValues,
 } from "@/lib/validations/auth";
 
-export function SignInForm() {
+export function LoginForm() {
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
-  } = useForm<SignInFormValues>({
-    resolver: zodResolver(signInSchema),
-    defaultValues: signInDefaultValues,
+  } = useForm<LoginFormValues>({
+    resolver: zodResolver(loginSchema),
+    defaultValues: loginDefaultValues,
   });
 
-  async function onSubmit(values: SignInFormValues) {}
+  async function onSubmit(values: LoginFormValues) {}
 
   return (
     <BidSphereCard
       title="BidSphere"
-      description="Sign in to bid on live auctions and manage your account."
+      description="Log in to bid on live auctions and manage your account."
       footerText="Don't have an account?"
       footerLinkText="Sign up"
-      footerHref="/sign-up"
+      footerHref="/signup"
     >
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6" noValidate>
         <div className="space-y-5">
@@ -58,7 +58,7 @@ export function SignInForm() {
           className="h-11 w-full text-sm font-medium"
           disabled={isSubmitting}
         >
-          {isSubmitting ? "Signing in..." : "Sign in"}
+          {isSubmitting ? "Logging in..." : "Log in"}
         </Button>
       </form>
     </BidSphereCard>

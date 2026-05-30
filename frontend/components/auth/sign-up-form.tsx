@@ -29,8 +29,8 @@ export function SignUpForm() {
       title="Create your account"
       description="Join BidSphere to discover auctions and start bidding today."
       footerText="Already have an account?"
-      footerLinkText="Sign in"
-      footerHref="/sign-in"
+      footerLinkText="Log in"
+      footerHref="/login"
     >
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
         <div className="space-y-5">
