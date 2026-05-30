@@ -30,12 +30,21 @@ export const signUpSchema = z
     path: ["confirmPassword"],
   });
 
+export const forgotPasswordSchema = z.object({
+  email: emailField,
+});
+
 export type LoginFormValues = z.infer<typeof loginSchema>;
 export type SignUpFormValues = z.infer<typeof signUpSchema>;
+export type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>;
 
 export const loginDefaultValues: LoginFormValues = {
   email: "",
   password: "",
+};
+
+export const forgotPasswordDefaultValues: ForgotPasswordFormValues = {
+  email: "",
 };
 
 export const signUpDefaultValues: SignUpFormValues = {

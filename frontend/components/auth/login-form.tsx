@@ -1,6 +1,7 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
+import Link from "next/link";
 import { useForm } from "react-hook-form";
 
 import { BidSphereCard } from "@/components/auth/auth-card";
@@ -50,6 +51,15 @@ export function LoginForm() {
             error={errors.password}
             {...register("password")}
           />
+        </div>
+
+        <div className="flex justify-end">
+          <Link
+            href="/forgot-password"
+            className="text-sm text-muted-foreground underline-offset-4 transition-colors hover:text-primary hover:underline"
+          >
+            Forgot password?
+          </Link>
         </div>
 
         <Button
