@@ -12,7 +12,7 @@ import {
   type SignUpFormValues,
 } from "@/lib/validations/auth";
 
-export function SignUpForm() {
+export function RegisterPage() {
   const {
     register,
     handleSubmit,

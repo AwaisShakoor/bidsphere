@@ -30,8 +30,8 @@ export function LoginForm() {
       title="BidSphere"
       description="Log in to bid on live auctions and manage your account."
       footerText="Don't have an account?"
-      footerLinkText="Sign up"
-      footerHref="/signup"
+      footerLinkText="Register"
+      footerHref="/register"
     >
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6" noValidate>
         <div className="space-y-5">

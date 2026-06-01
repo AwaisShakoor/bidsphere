@@ -15,7 +15,12 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/sign-up",
-        destination: "/signup",
+        destination: "/register",
+        permanent: true,
+      },
+      {
+        source: "/signup",
+        destination: "/register",
         permanent: true,
       },
     ];
