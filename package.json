@@ -1,8 +1,17 @@
 {
-  "dependencies": {
-    "@hookform/resolvers": "^5.4.0",
-    "axios": "^1.16.1",
-    "react-hook-form": "^7.76.1",
-    "zod": "^4.4.3"
+  "name": "bidsphere",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "bidsphere-frontend",
+    "bidsphere-backend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev -w bidsphere-frontend\" \"npm run dev -w bidsphere-backend\"",
+    "build": "npm run build -w bidsphere-frontend",
+    "install:all": "npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }
